@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="sketchStyle.css">
+    
+</head>
+<body>
+    <header>Etch-a-Sketch</header>
+    
+    <div class="main">
+        <div class="container" id="container"></div>
+        
+        <div class="settings">
+            <div class="slideContainer">
+                <p>Grid Size</p>
+                <input type="range" min="4" max="64" value="16" class="slider" id="gridSize">
+                <p>Size: <span id="demo"></span></p>
+            </div>
+            <div class="buttons">
+                <button class="active" id="classic">Classic</button>
+                <button id="rainbow">Rainbow</button>
+                <button id="eraser">Eraser</button>
+                <button id="clearButton">Clear</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            Konstantinos Kamperis
+        </p>
+    </footer>
+
+
+
+
+
+    <script src="sketchJavascript.js"></script>
+</body>
+</html>
