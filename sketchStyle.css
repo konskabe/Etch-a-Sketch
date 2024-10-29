@@ -68,10 +68,9 @@ button:focus, button.active{
 }
 .square{
     background-color: white;
-    width: 20px;
-    height: 20px;
     margin: 0;
     border: 1px black solid;
+    box-sizing: border-box;
 }
 
 .container{
@@ -90,6 +89,8 @@ button:focus, button.active{
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 700px;
+    justify-content: center;
 }
 
 .slider{

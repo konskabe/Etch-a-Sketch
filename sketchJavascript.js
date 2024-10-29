@@ -17,9 +17,7 @@ function createGrid(size){
             square.className = "square";
             document.getElementById("row"+i).appendChild(square);
             square.style.width = containerSize/size +"px";
-            square.style.height = containerSize/size 
-            -(2*parseInt(window.getComputedStyle(square).borderWidth,10)) +"px"; 
-            //need to remove the borderWidth of each square to fit in container
+            square.style.height = containerSize/size +"px";
         }
     }
     draw();
