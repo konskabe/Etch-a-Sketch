@@ -1,5 +1,5 @@
 const container = document.getElementById("container");
-const containerSize = 480;
+let containerSize = window.innerWidth <= 768 ? 320 : 480;
 const rainbow = document.getElementById("rainbow");
 const classic = document.getElementById("classic");
 const eraser = document.getElementById("eraser");
@@ -22,6 +22,20 @@ function createGrid(size){
     }
     draw();
 }
+
+function updateContainerSize(){
+    const squares = document.querySelectorAll(".square");
+    const newContainerSize = window.innerWidth <= 768 ? 320 : 480;
+    if (containerSize !== newContainerSize) {
+        containerSize = newContainerSize;
+        squares.forEach((square) => {
+            square.style.width = containerSize / size + "px";
+            square.style.height = containerSize / size + "px";
+        });
+    }
+}
+
+window.addEventListener("resize", updateContainerSize);
 
 
 function draw() {
@@ -115,3 +129,6 @@ buttons.forEach((button)=> {
         }
     });
 });
+
+
+
