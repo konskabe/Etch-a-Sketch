@@ -86,11 +86,13 @@ function getRandomRGBColor() {
 //slider size input
 let slider = document.getElementById("gridSize");
 let output = document.getElementById("demo");
-output.innerHTML = slider.value + "x" + slider.value;
 let size = slider.value;
+output.innerHTML = slider.value + "x" + slider.value;
+
 createGrid(size);
+
 slider.oninput = function() {
-    let size = this.value;
+    size = this.value;
     output.innerHTML = size+"x"+size;
     createGrid(size);
 }
